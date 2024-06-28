@@ -1,0 +1,447 @@
+/* Тёмная тема сторона силы для мобильных чего-там. */
+* {
+    font-family: Andale Mono, monospace;
+    transition: all 0.3s;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+body {
+    color: white;
+    display: flex;
+    font-size: 1.7vw;
+    flex-direction: column;
+    background-color: #1C1A1A;
+    padding: 1% 15% 1% 0;
+}
+b {
+    text-shadow: 0 0 2px white; 
+    font-weight: bold;
+    color: rgb(250, 233, 233);
+}
+a {
+    color: white;
+}
+i {
+    color: rgb(97, 94, 94);
+}
+.p_center {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+table {
+    width: 80%;
+    padding: 1%;
+    margin: auto;
+    height: 20vh;
+}
+td {
+    min-width: 10vw;
+    max-width: 50vw;
+    padding: 1%;
+    height: 10vh;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 10px;
+}
+.global_division {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.main {
+    width: 75%;
+}
+/* Сайдбар */
+.sidebar {
+    width: 25%;
+    margin-right: 2%;
+    padding: 1%;
+}
+.fixed {
+    position: fixed;
+    width: 20%;
+    height: 50vh;
+}
+.sidebar .menu_button {
+    background: none;
+    border: none;
+}
+.sidebar .menu_button img {
+    width: 4vw;
+}
+.sidebar .menu_button img:hover {
+    transform: scale(1.075);
+}
+@keyframes sidebar_animation_start {
+    0% {
+        position: relative;
+        left: -400px;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+    }
+}
+@keyframes sidebar_animation_close {
+    0% {
+        position: relative;
+        left: 0px;
+    }
+    100% {
+        position: relative;
+        left: -400px;
+    }
+}
+.sidebar .bar_menu {
+    display: none;
+    animation: 0.5s normal sidebar_animation_start forwards;
+    transition: all 1s;
+    background-color: #171717;
+    box-shadow: 2px 2px 10px black ;
+    width: 100%;
+    border-radius: 20px;
+    padding: 2% 0 5% 5%;
+}
+.sidebar .bar_menu_close {
+    display: none;
+    animation: 0.5s normal sidebar_animation_close forwards;
+    transition: all 1s;
+    background-color: #171717;
+    box-shadow: 2px 2px 10px black ;
+    width: 100%;
+    border-radius: 20px;
+    padding: 2% 0 5% 5%;
+}
+.sidebar .bar_menu div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4% 9% 1% 2%;
+}
+.sidebar .bar_menu div button {
+    color: white;
+    border-radius: 10px;
+    background-color: #353131;
+    border: none;
+    margin-bottom: 5%;
+    height: 10vh;
+    min-height: 50px;
+    box-shadow: 2px 2px 10px black;
+    font-size: 1.7vw;
+}
+.sidebar .bar_menu div button:hover {
+    transition: all 0s;
+    background-color: #5c5555;
+}
+.sidebar .bar_menu div button:active {
+    transition: all 0s;
+    margin: 0.5% 2% 4.5% 2%;
+}
+/* Старт */
+.start {
+    display: contents;
+}
+@keyframes standart_print {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.screen_print {
+    background-color: #171717;
+    animation: 0.5s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 5% 3% 5%;
+    box-shadow: 2px 2px 10px black;
+}
+.screen_print_case {
+    background-color: #171717;
+    animation: 0.5s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 5% 3% 5%;
+    box-shadow: 2px 2px 10px black;
+}
+.screen_print_example {
+    background-color: #171717;
+    border: 1px solid rgb(105, 98, 98);
+    animation: 0.5s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 5% 3% 5%;
+    text-shadow: 0 0 100px white;
+    box-shadow: 2px 2px 10px rgb(105, 98, 98); 
+}
+.screen_print_example_table {
+    background-color: #171717;
+    border: 1px solid rgb(209, 198, 198);
+    animation: 0.5s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 0% 3% 0%;
+    text-shadow: 0 0 100px white;
+    box-shadow: 2px 2px 10px rgb(105, 98, 98); 
+}
+.screen_print_none {
+    display: none;
+}
+.image_print {
+    width: 100%;
+    border-radius: 15px;
+}
+.div_image_print {
+    padding-top: 3%;
+    text-align: center;
+}
+.div_text_image {
+    text-align: center;
+    font-weight: bold;
+}
+.error {
+    display: none;
+    background-color: #171717;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3%;
+    animation: 0.5s standart_print ease;
+    box-shadow: 2px 2px 10px black ;
+}
+.error span {
+    color: red;
+}
+.screen_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2% 1% 2% 1%;
+    margin-bottom: 15%;
+    animation: 0.5s standart_print ease;
+    background-color: #171717;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black ;
+}
+.screen_input .arrow {
+    padding-top: 1%;
+    font-size: 4vw;
+    width: 7%;
+    text-align: right;
+    border: none;
+    margin-right: 1%;
+}
+.screen_input .input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.screen_input .input input{
+    width: 93%;
+    outline:none; 
+    color: transparent;
+    text-shadow: 0 0 0 rgb(255, 255, 255); 
+    caret-color: rgb(185, 180, 180);
+    background: none;
+    border: none;
+    font-size: 1.7vw;
+}
+.wads {
+    width: 93%;
+    height: 10vh;
+    outline:none;
+    background: none;
+    border: none;
+}
+#cursor {
+    float: left;
+    width: 5px;
+    height: 14px;
+    background: #21f838;
+}
+/* JS */
+.java_script {
+    display: none;
+}
+/* Окно приветствия */
+.hello_div {
+    position: absolute;
+    left: 5%; 
+    top: 5%;
+    width: 80vw;
+    background-color: #111111;
+    animation: 0.8s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 5% 3% 5%;
+    box-shadow: 2px 2px 10px rgb(122, 117, 117);
+}
+.hello_div_none {
+    display: none;
+}
+.hello_div .div_image {
+    text-align: center;
+}
+.hello_div img {
+    border-radius: 15px;
+    width: 60vw;
+}
+.hello_div .buttonHelloUser {
+    color: white;
+    width: 20vw;
+    height: 10vh;
+    font-size: 1.7vw;
+    background-color: #292727;
+    border-radius: 20px;
+    border: none
+}
+.hello_div  .buttonHelloUser:hover {
+    background-color: #3d3a3a;
+}
+.hello_div  .buttonHelloUser:active {
+    transition: all 0s;
+    width: 19.5vw;
+}
+/* Показ темы с верху экрана */
+@keyframes div_theme_display_start {
+    0% {
+        position: fixed;
+        top: -200px;
+    }
+    100% {
+        position: fixed;
+        top: 0px;
+    }
+}
+.div_theme_display {
+    animation: 1s div_theme_display_start ease;
+    position: fixed;
+    text-align: center;
+    left: 24.7%; 
+    top: 0.3%;
+    width: 50vw;
+    background-color: #111111;
+    margin-bottom: 0.5%;
+    border-radius: 20px;
+    padding: 1% 5% 1% 5%;
+    box-shadow: 2px 2px 10px black;
+    background-color: rgba(32, 32, 32, 0.9);
+}
+@keyframes div_theme_display_close {
+    0% {
+        position: fixed;
+        top: 0px;
+    }
+    100% {
+        position: fixed;
+        top: -200px;
+    }
+}
+.div_theme_display_none {
+    animation: 1s div_theme_display_close ease;
+    position: fixed;
+    text-align: center;
+    left: 24.7%; 
+    top: -200px;
+    width: 50vw;
+    background-color: #111111;
+    margin-bottom: 0.5%;
+    border-radius: 20px;
+    padding: 1% 5% 1% 5%;
+    box-shadow: 2px 2px 10px black;
+    background-color: rgba(32, 32, 32, 0.96);
+}
+/* Окно выбора темы */
+.div_Theme_White {
+    position: absolute;
+    transition: all 0.1s;
+    left: 5%; 
+    top: 5%;
+    width: 80vw;
+    background-color: #111111;
+    animation: 0.7s standart_print ease;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 3% 5% 10% 5%;
+    box-shadow: 2px 2px 10px rgb(48, 46, 46);
+}
+.div_Theme_White_none {
+    display: none;
+}
+.div_Theme_White .img_theme_PC {
+    width: 30vw;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgb(19, 18, 18);
+}
+.div_Theme_White .img_theme_PC:hover {
+    transform: scale(1.075);
+}
+.div_Theme_White .img_theme_Mobile {
+    width: 70vw;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgb(19, 18, 18);
+}
+.div_Theme_White .div_theme_flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.div_Theme_White .div_theme_flex_colum {
+    text-align: center;
+}
+/* Маленько уведомление */
+@keyframes div_info_start {
+    0% {
+        position: fixed;
+        right: -50%;
+    }
+    100% {
+        position: fixed;
+        right: 1%;
+    }
+}
+.divInfo {
+    position: fixed;
+    right: 1%; 
+    top: 80%;
+    animation: 1s div_info_start ease;
+    border-radius: 20px;
+    padding: 1%;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    background-color: rgba(68, 67, 67, 0.6);
+    z-index: 1;
+}
+.divInfo:hover {
+    background-color: rgba(94, 92, 92, 0.9);
+}
+.div_info_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div_info_flex img {
+    width: 10%;
+    margin-right: 2%;
+}
+@keyframes div_info_end {
+    0% {
+        position: fixed;
+        right: 3;
+    }
+    100% {
+        position: fixed;
+        right: -500%;
+    }
+}
+.divInfo_none {
+    position: fixed;
+    right: -500%; 
+    top: 80%;
+    animation: 1.5s div_info_end ease;
+    border-radius: 20px;
+    padding: 1%;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    background-color: rgba(68, 67, 67, 0.6);
+}

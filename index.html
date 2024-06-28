@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="css/styleBlack.css">
+    <link rel="shortcut icon" href="image/New_logo_v3.png">
+    <script defer src="script/div.js"></script>
+    <script defer src="script/Localization.js"></script>
+    <script defer src="script/main.js"></script>
+    <script defer src="script/js_class_input.js"></script>
+    <script defer src="script/technical_class_input.js"></script>
+    <script defer src="script/html_class_input.js"></script>
+    <script defer src="script/css_class_input.js"></script>
+    <script defer src="script/site_map_print.js"></script>
+    <title>HEART</title>
+</head> 
+<body>
+    <div id="global_division" class="global_division">
+        <!-- Sidebar -->
+        <aside id="aside" class="sidebar"> 
+            <div class="fixed">
+                <!-- Кнопка для sidebar -->
+                <button id="btn_sidebar" class="menu_button" onclick="openMenuBar()"><img id="btn_image_menu" src="image/menu.png" alt="menu"></button>
+                <!-- sidebar -->
+                <div id="bar_menu" class="bar_menu">
+                    <div>
+                        <button id="btn_sidebar_start"  onclick="quicLinkHomeMenu()"><span id="btn_start"></span></button>
+                        <button id="btn_sidebar_menu"  onclick="languageСhange()"><span id="btn_language"></span></button>
+                        <button id="btn_sidebar_theme"  onclick="OnTheam()"><span id="btn_theme"></span></button>
+                        <button id="btn_sidebar_map"  onclick="siteMap()"><span id="btn_map"></span></button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Основное -->
+        <div onclick="closeSidebar()" id="mainDiv" class="main">
+            <!-- Стартовый экран -->
+            <div id="start" class="start">
+                <!-- Вывод текста -->
+                <div id="screen_print" class="screen_print">
+                    <span id="text"></span>
+                </div>
+                <!-- Сообщение о ошибке -->
+                <div id="div_error" class="error">
+                    <span id="error"></span>
+                </div>
+                <!-- Ввод команд -->
+                <div id="screen_input" class="screen_input">
+                    <div class="input">
+                        <div id="arrow" class="arrow">></div>
+                        <input type="text" id="input" placeholder="" onchange="choiceInput(this.value)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
